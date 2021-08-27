@@ -6,7 +6,7 @@ public class Area {
 
 
     public static void main(String[] args) {
-
+        double area;
         double radius;
         double pi = 3.14;
 
@@ -17,7 +17,8 @@ public class Area {
         radius = input.nextDouble();
         input.close();
 
-
+        area =  pi * radius * radius;
+        System.out.println("The area of a circle of " + radius + " is: " + area);
 
     }
 

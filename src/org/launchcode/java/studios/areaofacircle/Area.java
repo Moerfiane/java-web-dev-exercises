@@ -12,7 +12,7 @@ public class Area {
         area = (radius * radius) * 3.14;
         while(radius <= 0) {
             System.out.println("Enter a positive number of radius:");
-            radius = input.nextDouble();*/
+            radius = input.nextDouble();
             if (radius <= 0) {
                 System.out.println("Enter a positive number of radius:");
                 radius = input.nextDouble();

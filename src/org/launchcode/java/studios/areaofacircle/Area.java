@@ -10,6 +10,14 @@ public class Area {
         System.out.println("Enter the radius: ");
         radius = input.nextDouble();
         area = (radius * radius) * 3.14;
+        while(radius <= 0) {
+            System.out.println("Enter a positive number of radius:");
+            radius = input.nextDouble();*/
+            if (radius <= 0) {
+                System.out.println("Enter a positive number of radius:");
+                radius = input.nextDouble();
+            }
+        }
         System.out.println("The area of a circle with a radius of " + radius + " = " + area);
 
         System.out.println("The area of a circleeee with a radius of " + radius + " = " + Circle.getArea(radius));

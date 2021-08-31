@@ -5,8 +5,8 @@ import java.util.Locale;
 
 public class Main {
     public static void main(String[] args){
-        String sample = "What is even happening here";
-        sample = sample.toLowerCase(Locale.ROOT);
+        String sample = "What is even happ!eni#ng %here";
+        sample = sample.toLowerCase(Locale.ROOT).replaceAll("[^a-z]", "");
         char[] charactersInString = sample.toCharArray();
         HashMap<Character , Integer> letterList = new HashMap<>();
 

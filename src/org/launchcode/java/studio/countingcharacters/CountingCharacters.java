@@ -11,11 +11,14 @@ public class CountingCharacters {
                 "Once you’ve done that, it’s pretty straightforward from there.";
         char[] charArray = phrase.toLowerCase(Locale.ROOT).toCharArray();
         for(char x : charArray){
-            if(count.containsKey(x)){
-                count.put(x, count.get(x) + 1);
-            } else{
-                count.put(x, 1);
+            if(Character.isLetter(x)){
+                if(count.containsKey(x)){
+                    count.put(x, count.get(x) + 1);
+                } else{
+                    count.put(x, 1);
+                }
             }
+
         }
         for(Map.Entry<Character, Integer> x : count.entrySet()){
             System.out.println(x.getKey() + ": "+ x.getValue());

@@ -10,13 +10,20 @@ public class Main {
         char[] charactersInString = sample.toCharArray();
         HashMap<Character , Integer> letterList = new HashMap<>();
 
-        for(int i = 0; i < sampleSplit.length; i++){
+        for(int i = 0; i < charactersInString.length; i++){
             if(!letterList.containsKey(charactersInString[i])){
                 letterList.put(charactersInString[i], 1);
+            }
+            else if (letterList.containsKey(charactersInString[i]))
+            {
+                letterList.put(charactersInString[i], letterList.get(charactersInString[i]) + 1);
+
             }
 
 
         }
+
+        System.out.println(letterList);
 
 
     }

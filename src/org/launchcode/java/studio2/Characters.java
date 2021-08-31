@@ -15,10 +15,28 @@ public class Characters {
         Scanner input = new Scanner(System.in);
         System.out.println("Please input text below:");
         String str = input.nextLine();
-        input.close();
+
 
         char[] charactersInString = text.toCharArray();
 
+        HashMap<Character, Integer> characterCount = new HashMap<>();
+
+
+        for (char character : charactersInString) {
+            if (characterCount.contains(character)) {
+               characterCount.put(character, characterCount.get(character)+1)
+            } else {
+                charactersInString.put(character, 1);
+            }
+           System.out.println(character);
+        }
+
+
+        for (Map.Entry<Character, Integer> characterKey : characterCount.entrySet()) {
+            System.out.println(characterKey.getKey() + " (" + characterKey.getValue() + ")");
+
+        }
 
     }
+
 }
